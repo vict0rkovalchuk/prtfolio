@@ -1,0 +1,14 @@
+.social_links {
+  width: 25px;
+  height: 25px;
+  &-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+  }
+  i {
+    font-size: 20px;
+    color: #000;
+  }
+}
