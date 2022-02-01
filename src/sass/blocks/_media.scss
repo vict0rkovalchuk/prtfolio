@@ -22,6 +22,32 @@
       }
     }
   }
+  .resume {
+    &__wrapper {
+      grid-template-columns: repeat(2, 375px);
+      column-gap: 80px;
+    }
+  }
+  .skills {
+    &__list {
+      grid-template-columns: repeat(3, 270px);
+      grid-template-rows: repeat(2, minmax(270px, auto));
+      grid-auto-rows: minmax(270px, auto);
+      justify-content: space-between;
+      gap: unset;
+      row-gap: 13px;
+    }
+    &__ratings {
+      grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 420px);
+      grid-auto-rows: minmax(70px, auto);
+      justify-content: space-between;
+      column-gap: 45px;
+      row-gap: 30px;
+      &-line {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -43,6 +69,28 @@
       &-item {
         grid-template-columns: 40px 320px;
         column-gap: 20px;
+      }
+    }
+  }
+  .resume {
+    padding-top: 90px;
+    &__wrapper {
+      padding: 60px 5px 0 5px;
+      grid-template-columns: repeat(2, 330px);
+      column-gap: 49px;
+    }
+  }
+  .skills {
+    &__list {
+      grid-template-columns: repeat(3, 228px);
+    }
+    &__ratings {
+      margin-top: 70px;
+      grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 325px);
+      column-gap: unset;
+      justify-content: space-between;
+      &-line {
+        width: 100%;
       }
     }
   }
@@ -79,6 +127,25 @@
       }
     }
   }
+  .resume {
+    &__wrapper {
+      padding: 60px 40px 0 40px;
+      grid-template-columns: 1fr;
+      column-gap: unset;
+      row-gap: 40px;
+    }
+  }
+  .skills {
+    padding-top: 40px;
+    &__list {
+      margin-top: 30px;
+      grid-template-columns: repeat(2, 250px);
+    }
+    &__ratings {
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -91,6 +158,9 @@
       font-size: 26px;
     }
     &_fz36 {
+      margin: 20px auto 0 auto;
+      margin-top: 20px;
+      line-height: 36px;
       font-size: 24px;
     }
   }
@@ -119,6 +189,34 @@
     }
     &__skills {
       grid-template-columns: 1fr;
+    }
+  }
+  .resume {
+    padding-top: 55px;
+    &__wrapper {
+      padding: 40px 0 0 0;
+    }
+    .divider {
+      margin-top: 15px;
+    }
+  }
+  .skills {
+    &__list {
+      margin-top: 20px;
+      grid-template-columns: 270px;
+      justify-content: center;
+      row-gap: 20px;
+    }
+    &__ratings {
+      row-gap: 40px;
+    }
+    .title {
+      &_fz36 {
+        width: 209px;
+      }
+    }
+    .divider {
+      margin-top: 15px;
     }
   }
 }
