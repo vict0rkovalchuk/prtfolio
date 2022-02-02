@@ -30,22 +30,36 @@
   }
   .skills {
     &__list {
-      grid-template-columns: repeat(3, 270px);
-      grid-template-rows: repeat(2, minmax(270px, auto));
-      grid-auto-rows: minmax(270px, auto);
+      grid-template-columns: repeat(auto-fit, 270px);
       justify-content: space-between;
-      gap: unset;
-      row-gap: 13px;
     }
     &__ratings {
-      grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 420px);
+      grid-template-columns: repeat(auto-fit, 350px);
       grid-auto-rows: minmax(70px, auto);
       justify-content: space-between;
-      column-gap: 45px;
-      row-gap: 30px;
-      &-line {
-        width: 100%;
+      padding: 0 30px;
+    }
+  }
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: center;
+      .horizontal {
+        grid-row: unset;
+        grid-column: unset;
       }
+      .vertical {
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+  }
+  .prices {
+    &__list {
+      grid-template-columns: repeat(auto-fit, 366px);
+      justify-content: space-between;
+      column-gap: unset;
     }
   }
 }
@@ -81,17 +95,20 @@
     }
   }
   .skills {
-    &__list {
-      grid-template-columns: repeat(3, 228px);
-    }
     &__ratings {
-      margin-top: 70px;
-      grid-template: repeat(2, minmax(70px, auto)) / repeat(2, 325px);
-      column-gap: unset;
+      grid-template-columns: repeat(auto-fit, 320px);
       justify-content: space-between;
+      padding: 0;
+      column-gap: 0;
       &-line {
         width: 100%;
       }
+    }
+  }
+  .prices {
+    &__list {
+      grid-template-columns: repeat(auto-fit, 330px);
+      padding: 0;
     }
   }
 }
@@ -138,12 +155,33 @@
   .skills {
     padding-top: 40px;
     &__list {
-      margin-top: 30px;
-      grid-template-columns: repeat(2, 250px);
+      justify-content: center;
     }
     &__ratings {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, 320px);
+      grid-auto-rows: minmax(70px, auto);
+      justify-content: center;
       margin-top: 40px;
+      &-line {
+        width: 100%;
+      }
+    }
+  }
+  .portfolio {
+    padding-top: 40px;
+    .divider {
+      margin-top: 15px;
+    }
+    &__wrapper {
+      margin-top: 40px;
+    }
+  }
+  .prices {
+    padding-top: 40px;
+    &__list {
+      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, 350px);
+      justify-content: center;
     }
   }
 }
@@ -201,15 +239,6 @@
     }
   }
   .skills {
-    &__list {
-      margin-top: 20px;
-      grid-template-columns: 270px;
-      justify-content: center;
-      row-gap: 20px;
-    }
-    &__ratings {
-      row-gap: 40px;
-    }
     .title {
       &_fz36 {
         width: 209px;
@@ -217,6 +246,14 @@
     }
     .divider {
       margin-top: 15px;
+    }
+    &__ratings {
+      grid-template-columns: repeat(auto-fit, 300px);
+    }
+  }
+  .prices {
+    &__list {
+      grid-template-columns: repeat(auto-fit, 300px);
     }
   }
 }
